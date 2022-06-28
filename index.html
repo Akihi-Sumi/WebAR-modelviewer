@@ -7,17 +7,37 @@
         <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
         <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script> 
 
+        <link rel="stylesheet" href="style.css">
         <title>model-viewerサンプル</title>
     </head>
 
     <body style="margin: 0; overflow: hidden;">
-        <model-viewer
-            style="width: 100%; min-height: 400px; margin: 0; background-color: aqua;"
-            src="./Duck/Duck.gltf"
-            ar
-            ar-modes="scene-viewer webxr quick-look"
-            auto-rotate
-            camera-controls
-        ></model-viewer>
+        <div class="card">
+            <div class="contentBox">
+                <div class="content">
+                    <h2>Duck</h2>
+                    <div class="imgBox">
+                        <model-viewer
+                            src="./Duck/Duck.gltf"
+                            ar
+                            ar-modes="scene-viewer webxr quick-look"
+                            auto-rotate
+                            camera-controls
+                        ></model-viewer>
+                    </div>
+                </div>
+            </div>
+            <div class="toggle">
+                <span></span>
+            </div>
+        </div>
+
+        <script>
+            let card = document.querySelector('.card');
+            let cardtoggle = document.querySelector('.toggle');
+            cardtoggle.onclick = function(){
+                card.classList.toggle('active')
+            }
+        </script>
     </body>
 </html>
