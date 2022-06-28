@@ -168,7 +168,7 @@ body
     content: '';
     position: absolute;
     left: -20px;
-    top: 19px;
+    top: 20px;
     transform: translateY(-50%);
     width: 20px;
     height: 2px;
@@ -195,7 +195,7 @@ body
     content: '';
     position: absolute;
     right: -19px;
-    top: 19px;
+    top: 20px;
     transform: translateY(-50%);
     width: 20px;
     height: 2px;
